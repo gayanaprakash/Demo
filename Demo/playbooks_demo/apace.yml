@@ -1,5 +1,8 @@
- ---
- - name: Print message
-    hosts: webserver
-      debug:
-        msg: Hello Ansible World
+--- 
+- hosts: webserver
+  name: "httpd is there"
+  task: 
+    - name: "ensure httpd is installed"
+      yum: 
+        name: httpd
+        state: latest

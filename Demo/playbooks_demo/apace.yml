@@ -1,3 +1,4 @@
 - name: Print message
+   hosts: webserver
       debug:
         msg: Hello Ansible World

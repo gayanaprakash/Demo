@@ -1,5 +1,10 @@
----
-- hosts: windows
-  name: creating a directory
-  gather_facts: true       
- 
+--- 
+- 
+  hosts: webserver
+  name: "httpd is there"
+  task: 
+    - 
+      name: "ensure httpd is installed"
+      yum: 
+        name: httpd
+        state: latest

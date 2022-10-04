@@ -1,10 +1,13 @@
---- 
-- 
-  hosts: webserver
-  name: "httpd is there"
-  task: 
-    - 
-      name: "ensure httpd is installed"
-      yum: 
-        name: httpd
-        state: latest
+---
+- name: file module demo
+  hosts: all
+  vars:
+    mydir: "~/example"
+  tasks:
+    - name: Creating a directory
+      ansible.builtin.file:
+        path: "{{ mydir }}"
+        state: directory
+        owner: devops
+        group: users
+        mode: '0644'

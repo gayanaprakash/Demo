@@ -1,8 +1,3 @@
----
- - name: httpd is there
-     hosts: all
-       task:
-         - name: ensure httpd is installed 
-             yum:
-               name: httpd
-               state: present
+- name: Print message
+      debug:
+        msg: Hello Ansible World

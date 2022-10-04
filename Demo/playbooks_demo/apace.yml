@@ -1,0 +1,8 @@
+---
+  - name: httpd is there
+     host: webserver
+     task:
+      - name: ensure httpd is installed 
+         yum:
+           name: httpd
+           state: present

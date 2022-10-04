@@ -3,7 +3,7 @@
   name: creating a directory
   gather_facts: true       
   tasks:
-   - name: Create directory 
-     ansible.windows.win_file:
-      path: C://Temp//ansible playlist//Databaseinstaller
-      state: directory
+    - name: Create directory 
+      ansible.windows.win_file:
+        path: C://Temp//ansible playlist//Databaseinstaller
+        state: directory

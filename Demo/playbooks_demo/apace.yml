@@ -1,13 +1,9 @@
 ---
-- name: file module demo
-  hosts: all
-  vars:
-    mydir: "~/example"
+- hosts: all
+  name: downloading the SWL_Database_winforms exe using config_remote.json
+  gather_facts: true       
   tasks:
-    - name: Creating a directory
-      ansible.builtin.file:
-        path: "{{ mydir }}"
-        state: directory
-        owner: devops
-        group: users
-        mode: '0644'
+      - name: Create directory 
+        ansible.windows.win_file:
+         path: C://Temp//ansible playlist//Databaseinstaller
+         state: directory

@@ -5,5 +5,5 @@
   tasks:
    - name: Create directory 
      ansible.windows.win_file:
-       path: C://Temp//ansible playlist//Databaseinstaller
+      path: C://Temp//ansible playlist//Databaseinstaller
        state: directory

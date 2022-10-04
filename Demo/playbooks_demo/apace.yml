@@ -1,10 +1,8 @@
 --- 
-- 
-  hosts: webserver
+- hosts: webserver
   name: "httpd is there"
   task: 
-    - 
-      name: "ensure httpd is installed"
+    - name: "ensure httpd is installed"
       yum: 
         name: httpd
         state: latest
